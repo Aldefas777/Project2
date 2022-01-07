@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="daa4bb207f044fb19bf703f1e7c2be68" Name="Diagram1">
+        <EntityTypeShape EntityType="z3_MakarovModel.Ed_Izmeren" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="z3_MakarovModel.Material" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="z3_MakarovModel.Sklad" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="z3_MakarovModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="z3_MakarovModel.Type_Material" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="z3_MakarovModel.FK_Material_Ed_Izmeren" ManuallyRouted="false" />
+        <AssociationConnector Association="z3_MakarovModel.FK_Material_Sklad" ManuallyRouted="false" />
+        <AssociationConnector Association="z3_MakarovModel.FK_Sklad_Type_Material" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

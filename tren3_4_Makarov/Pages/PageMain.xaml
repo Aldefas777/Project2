@@ -1,0 +1,41 @@
+﻿<Page x:Class="tren3_4_Makarov.Pages.PageMain"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:tren3_4_Makarov.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageMain">
+
+    <Grid>
+        <ScrollViewer Margin="0 0 0 100">
+            <ListBox  x:Name="ListSclad" Background="Transparent" Width="650" BorderBrush="Transparent">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem BorderBrush="Black" Background="White" Width="600">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="0 0 2 0">Склад номер </TextBlock>
+                                    <TextBlock x:Name="NameSklad" Text="{Binding id}"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock x:Name="AdressSklad" Text="{Binding Adress}"></TextBlock>
+                                    <TextBlock Margin="0 0 2 0">Вид материалов: </TextBlock>
+                                    <TextBlock x:Name="VidSklad" Text="{Binding Type_Material.Name}"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="btnDelete" Content="Удалить" Click="btnDelete_Click" Style="{StaticResource btnMain}"></Button>
+                                    <Button x:Name="btnRed" Style="{StaticResource btnMain}" Content="Редактировать" Click="btnRed_Click"></Button>
+                                </StackPanel>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10" Orientation="Horizontal">
+            <Button x:Name="btnAdd" Content="Добавить" Click="btnAdd_Click" Style="{StaticResource btnMain}"></Button>
+        </StackPanel>
+    </Grid>
+</Page>
